@@ -4,7 +4,6 @@ package main
 
 import (
 	"bytes"
-	"fmt"
 	"image/color"
 	"image/png"
 
@@ -50,12 +49,8 @@ func run() {
 			blindGopherSprite.Draw(win, pixel.IM.Moved(win.Bounds().Center()))
 		}
 
-		mousePosition := win.MousePosition()
-
-		fmt.Println("Looking at", "X:", int(mousePosition.X), "Y:", int(mousePosition.Y))
-
-		rightEyeSprite.Draw(win, pixel.IM.Moved(rightEyePosition(mousePosition)))
-		leftEyeSprite.Draw(win, pixel.IM.Moved(leftEyePosition(mousePosition)))
+		rightEyeSprite.Draw(win, pixel.IM.Moved(rightEyePosition(win.MousePosition())))
+		leftEyeSprite.Draw(win, pixel.IM.Moved(leftEyePosition(win.MousePosition())))
 
 		win.Update()
 	}
