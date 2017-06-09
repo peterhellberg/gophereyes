@@ -14,10 +14,12 @@ import (
 
 var (
 	blindGopher = assetPictureData("blind-gopher-brown-beard.png")
+	pinkyGopher = assetPictureData("blind-gopher-pinky-liscious.png")
 	rightEye    = assetPictureData("right-eye.png")
 	leftEye     = assetPictureData("left-eye.png")
 
 	blindGopherSprite = pixel.NewSprite(blindGopher, blindGopher.Bounds())
+	pinkyGopherSprite = pixel.NewSprite(pinkyGopher, pinkyGopher.Bounds())
 	rightEyeSprite    = pixel.NewSprite(rightEye, rightEye.Bounds())
 	leftEyeSprite     = pixel.NewSprite(leftEye, leftEye.Bounds())
 )
@@ -42,7 +44,11 @@ func run() {
 
 		win.Clear(color.RGBA{0x87, 0xce, 0xeb, 0xff})
 
-		blindGopherSprite.Draw(win, pixel.IM.Moved(win.Bounds().Center()))
+		if win.Pressed(pixelgl.MouseButtonLeft) {
+			pinkyGopherSprite.Draw(win, pixel.IM.Moved(win.Bounds().Center()))
+		} else {
+			blindGopherSprite.Draw(win, pixel.IM.Moved(win.Bounds().Center()))
+		}
 
 		mousePosition := win.MousePosition()
 
