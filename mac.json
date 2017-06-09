@@ -3,11 +3,18 @@
   "id": "se.c7.gophereyes",
   "version": "0.1",
   "build-number": 1,
+  "url-scheme": "",
   "icon": "icon.png",
   "dev-region": "en",
-  "deployment-target": "10.12",
-  "copyright": "Copyright © 2017 Peter Hellberg. MIT License",
-  "role": "Viewer",
+  "deployment-target": "10.11",
+  "copyright": "Peter Hellberg. MIT License",
+  "role": "None",
   "category": "public.app-category.entertainment",
-  "sandbox": false
+  "sandbox": false,
+  "capabilities": {
+    "network": {
+      "in": false,
+      "out": false
+    }
+  }
 }
