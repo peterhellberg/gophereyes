@@ -9,7 +9,6 @@
   "deployment-target": "10.11",
   "copyright": "Peter Hellberg. MIT License",
   "role": "None",
-  "category": "public.app-category.entertainment",
   "sandbox": false,
   "capabilities": {
     "network": {
