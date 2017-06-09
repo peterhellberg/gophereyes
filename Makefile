@@ -15,7 +15,9 @@ clean:
 app:
 	macpack build
 	mkdir -p build
-	rm -rf build/GopherEyes.app
+	rm -rf build/GopherEyes.app GopherEyes.app/Contents/Resources/css
+	rm -f GopherEyes.app/Contents/Resources/.DS_Store
+	rm -f GopherEyes.app/Contents/Resources/icon.png
 	mv GopherEyes.app build/
 
 upx: build
