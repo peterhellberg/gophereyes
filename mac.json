@@ -1,0 +1,13 @@
+{
+  "name": "GopherEyes",
+  "id": "se.c7.gophereyes",
+  "version": "0.1",
+  "build-number": 1,
+  "icon": "icon.png",
+  "dev-region": "en",
+  "deployment-target": "10.12",
+  "copyright": "Copyright © 2017 Peter Hellberg. MIT License",
+  "role": "Viewer",
+  "category": "public.app-category.entertainment",
+  "sandbox": false
+}
