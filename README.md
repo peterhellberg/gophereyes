@@ -10,6 +10,23 @@
 go get -u github.com/peterhellberg/gophereyes
 ```
 
+## Compilation of GopherEyes.app
+
+First install the build dependencies [macpack](https://github.com/murlokswarm/macpack) and [upx](https://upx.github.io/)
+
+```sh
+go get -u github.com/murlokswarm/macpack
+brew install upx
+```
+
+Then run:
+
+```
+cd $GOPATH/src/github.com/peterhellberg/gophereyes
+make upx-app
+open build/GopherEyes.app
+```
+
 ## License (MIT)
 
 Copyright (c) 2017 [Peter Hellberg](http://c7.se/)
