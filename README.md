@@ -23,8 +23,8 @@ Then run:
 
 ```
 cd $GOPATH/src/github.com/peterhellberg/gophereyes
-make upx-app
-open build/GopherEyes.app
+make upx
+open build/gophereyes
 ```
 
 ## License (MIT)
